@@ -1,0 +1,40 @@
+{
+  "name": "afa-montserrat",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "backend-afa",
+    "frontend-afa"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "lint:backend": "eslint backend-afa/",
+    "lint:frontend": "eslint frontend-afa/",
+    "dev:frontend": "npm run dev --workspace=frontend-afa",
+    "dev:backend": "npm run dev --workspace=backend-afa",
+    "build:frontend": "npm run build --workspace=frontend-afa",
+    "build:backend": "npm run build --workspace=backend-afa"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "packageManager": "npm@10.9.2",
+  "devDependencies": {
+    "@eslint/js": "^9.36.0",
+    "@typescript-eslint/eslint-plugin": "^8.45.0",
+    "@typescript-eslint/parser": "^8.45.0",
+    "eslint": "^9.36.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "prettier": "^3.6.2",
+    "turbo": "^2.5.8"
+  },
+  "prettier": "./.prettierrc.cjs",
+  "dependencies": {
+    "@midudev/tailwind-animations": "^0.2.0"
+  }
+}

@@ -1,0 +1,15 @@
+node_modules/
+lib/
+.turbo/
+dist/
+build/
+npm-debug.log*
+.vscode/
+.idea/
+.env
+*.env.*
+*storybook.log
+storybook-static/
+tailwind-dev.css
+coverage/
+CLAUDE.md

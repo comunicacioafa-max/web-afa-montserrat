@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "extraescolars",
+  "info": {
+    "singularName": "extraescolar",
+    "pluralName": "extraescolars",
+    "displayName": "Extraescolars"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "extraescolar": {
+      "type": "component",
+      "component": "home.comissio",
+      "repeatable": false,
+      "required": true
+    }
+  }
+}

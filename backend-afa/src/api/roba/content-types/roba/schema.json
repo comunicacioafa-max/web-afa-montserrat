@@ -1,0 +1,29 @@
+{
+  "kind": "singleType",
+  "collectionName": "robas",
+  "info": {
+    "singularName": "roba",
+    "pluralName": "robas",
+    "displayName": "Roba"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "roba": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "home.comissio",
+      "repeatable": false
+    }
+  }
+}
