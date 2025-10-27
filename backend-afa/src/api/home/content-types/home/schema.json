@@ -15,6 +15,16 @@
     }
   },
   "attributes": {
+    "seo": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.seo",
+      "repeatable": false
+    },
     "title": {
       "type": "string",
       "pluginOptions": {
@@ -22,7 +32,6 @@
           "localized": true
         }
       },
-      "minLength": 5,
       "required": true
     },
     "subtitle": {
@@ -32,9 +41,7 @@
           "localized": true
         }
       },
-      "minLength": 5,
-      "required": true,
-      "unique": true
+      "required": false
     },
     "hero": {
       "type": "media",
@@ -50,15 +57,6 @@
         "files"
       ]
     },
-    "whoweare": {
-      "type": "blocks",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "required": true
-    },
     "comissions": {
       "type": "component",
       "pluginOptions": {
@@ -66,10 +64,8 @@
           "localized": true
         }
       },
-      "component": "home.comissio",
-      "repeatable": true,
-      "required": true,
-      "min": 1
+      "component": "comissions.comissio",
+      "repeatable": true
     },
     "faqs": {
       "type": "component",
@@ -78,16 +74,25 @@
           "localized": true
         }
       },
-      "component": "home.faq",
+      "component": "shared.faqs",
       "repeatable": true
     },
-    "contact": {
+    "whoweare": {
       "type": "blocks",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       }
+    },
+    "contact": {
+      "type": "richtext",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
     }
   }
 }
