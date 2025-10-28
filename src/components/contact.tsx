@@ -12,7 +12,7 @@ export default async function Contact() {
       className="
     relative rounded-4xl p-6 lg:p-12 bg-card-yellow flex flex-col text-black"
     >
-      <h2 className="mb-4 text-5xl font-bold font-heading">Contactens</h2>
+      <h2 className="mb-4 text-5xl font-bold font-heading">Contacte</h2>
       <div className="[&>p>a]:text-blue-600 [&>p>a]:cursor-pointer [&>p>a]:hover:text-blue-800 [&>p]:text-pretty [&>p]:font-sans">
         <MarkdownComponent>{homeInfo.contact}</MarkdownComponent>
       </div>
