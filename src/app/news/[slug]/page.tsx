@@ -3,7 +3,7 @@ import {getNewBySlug, getNews} from '@/lib/get-news'
 import DynamicBlocks from '@/components/dynamic-blocks'
 import Image from 'next/image'
 
-export const revalidate = 60 * 60 // Revalidate every hour
+export const revalidate = 3600
 
 export async function generateStaticParams() {
   const articles = await getNews()

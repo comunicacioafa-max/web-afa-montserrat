@@ -2,7 +2,7 @@ import Container from '@/components/container'
 import {getCommissionsInfo, getAllCommissions} from '@/lib/get-comissions-info'
 import DynamicBlocks from '@/components/dynamic-blocks'
 
-export const revalidate = 60 * 60 // Revalidate every hour
+export const revalidate = 3600
 
 export async function generateStaticParams() {
   const comissions = await getAllCommissions()
