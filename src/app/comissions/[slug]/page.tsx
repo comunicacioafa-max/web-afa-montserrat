@@ -1,6 +1,16 @@
 import Container from '@/components/container'
-import {getCommissionsInfo} from '@/lib/get-comissions-info'
+import {getCommissionsInfo, getAllCommissions} from '@/lib/get-comissions-info'
 import DynamicBlocks from '@/components/dynamic-blocks'
+
+export const revalidate = 60 * 60 // Revalidate every hour
+
+export async function generateStaticParams() {
+  const comissions = await getAllCommissions()
+ 
+  return comissions.map((comission: {slug: string}) => ({
+    slug: comission.slug,
+  }))
+}
 
 export default async function Page({params}: {params: Promise<{slug: string}>}) {
   const {slug} = await params

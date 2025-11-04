@@ -1,7 +1,17 @@
 import Container from '@/components/container'
-import {getNewBySlug} from '@/lib/get-news'
+import {getNewBySlug, getNews} from '@/lib/get-news'
 import DynamicBlocks from '@/components/dynamic-blocks'
 import Image from 'next/image'
+
+export const revalidate = 60 * 60 // Revalidate every hour
+
+export async function generateStaticParams() {
+  const articles = await getNews()
+ 
+  return articles.map((article: {slug: string}) => ({
+    slug: article.slug,
+  }))
+}
 
 export default async function Page({params}: {params: Promise<{slug: string}>}) {
   const {slug} = await params

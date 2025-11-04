@@ -6,6 +6,8 @@ import Container from '@/components/container'
 import Faqs from '@/components/faqs'
 import Contact from '@/components/contact'
 
+export const revalidate = 60 * 60 // Revalidate every hour
+
 export default async function Home() {
   return (
     <>
