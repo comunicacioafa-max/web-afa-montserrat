@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import Markdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
+import rehypeRaw from 'rehype-raw'
 import Autoplay from 'embla-carousel-autoplay'
 import {Carousel, CarouselContent, CarouselItem} from '@/components/ui/carousel'
 
@@ -29,12 +30,12 @@ type DynamicBlocksProps = {
 
 export default function DynamicBlocks({blocks}: DynamicBlocksProps) {
   return (
-    <div className="[&_a]:underline [&_a]:text-blue-400 [&>h2]:text-2xl [&>h2]:font-heading [&>h2]:font-bold [&>h3]:text-2xl [&>h3]:text-blue-400 [&>blockquote]:bg-amber-200 [&>blockquote]:p-2 [&>blockquote]:text-pretty [&>blockquote]:font-mono [&>blockquote]:leading-relaxed [&>blockquote]:my-4 [&>p]:text-pretty [&>p]:font-mono [&>p]:leading-relaxed [&>p]:my-4 [&>ol]:list-decimal [&>ul]:list-disc [&>ul]:mb-4 [&>ol>li]:ml-12 [&>ol>li]:mt-4 [&>ul>li]:ml-12 [&>ul>li]:mt-4">
+    <div className="[&_a]:underline [&_a]:text-blue-400 [&>h2]:text-2xl [&>h2]:font-heading [&>h2]:font-bold [&>h3]:text-2xl [&>h3]:text-blue-400 [&>h4]:text-2xl [&>h4]:font-bold [&>blockquote]:bg-amber-200 [&>blockquote]:p-2 [&>blockquote]:text-pretty [&>blockquote]:font-mono [&>blockquote]:leading-relaxed [&>blockquote]:my-4 [&>p]:text-pretty [&>p]:font-mono [&>p]:leading-relaxed [&>p]:my-4 [&>ol]:list-decimal [&>ul]:list-disc [&>ul]:mb-4 [&>ol>li]:ml-12 [&>ol>li]:mt-4 [&>ul>li]:ml-12 [&>ul>li]:mt-4">
       {blocks.map(block => {
         switch (block.__component) {
           case 'shared.rich-text':
             return (
-              <Markdown key={block.id} remarkPlugins={[remarkGfm]}>
+              <Markdown key={block.id} remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>
                 {block.body}
               </Markdown>
             )
