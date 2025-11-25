@@ -6,7 +6,7 @@ import Container from '@/components/container'
 import Faqs from '@/components/faqs'
 import Contact from '@/components/contact'
 
-export const revalidate = 3600
+export const revalidate = 600
 
 export default async function Home() {
   return (
