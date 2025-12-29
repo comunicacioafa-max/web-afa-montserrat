@@ -45,7 +45,9 @@ async function News() {
     <section className="rounded-4xl p-6 lg:p-12 bg-panel-background">
       <h2 className="text-3xl mb-8 font-heading">Notícies Recents</h2>
       <div className="flex overflow-x-scroll gap-4 mx-auto pb-8 scrollbar">
-        {news.map(
+        {news.sort((a, b) => {
+          return new Date(b.publishedAt) - new Date(a.publishedAt);
+        }).map(
           (
             article: {id: string; slug: string; title: string; description: string; cover: {url: string}},
             index: number

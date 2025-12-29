@@ -12,10 +12,12 @@ async function Hero() {
       }}
     >
       <div className="absolute inset-0 z-10 bg-gradient-to-t from-white to-transparent to-40%"></div>
-      <h1 className="z-20 text-4xl font-extrabold text-white font-heading text-shadow-black text-shadow-xs mb-4 animate-fade-in-up">
+      <div className="bg-white opacity-75 p-6 rounded-4xl">
+      <h1 className="z-20 text-4xl font-extrabold text-emerald-900 font-heading text-shadow-black text-shadow-xs mb-4 animate-fade-in-up">
         {homeInfo.title}
       </h1>
-      <h2 className="z-20 text-2xl font-bold font-heading text-white animate-fade-in-up">{homeInfo.subtitle}</h2>
+      <h2 className="z-20 text-2xl font-bold font-heading text-emerald-900 animate-fade-in-up">{homeInfo.subtitle}</h2>
+      </div>
     </section>
   )
 }

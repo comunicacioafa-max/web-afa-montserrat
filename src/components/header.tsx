@@ -42,7 +42,7 @@ function Header() {
   }, [])
 
   return (
-    <header className="sticky top-0 z-50 mx-auto flex h-20 w-full select-none items-center bg-white opacity-75 md:overflow-hidden">
+    <header className="sticky backdrop-blur-md top-0 z-50 mx-auto flex h-20 w-full select-none items-center bg-white opacity-75 md:overflow-hidden">
       <nav className="flex w-full items-center justify-between max-w-5xl mx-auto px-4">
         <Link href="/">
           <Image src="/logo_afa.jpeg" alt="Logo AFA" width={60} height={60} />
